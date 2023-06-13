@@ -49,8 +49,8 @@
   </style>
 </head>
 <body>
-<h1>Student Form</h1>
-  <form action="edit"  method="POST">
+<h1>Update Student Form</h1>
+  <form action="/update"  method="POST">
     @csrf
     <input type="hidden" name="id" value={{$formdata['id']}} >
     <label for="name">Name:</label>

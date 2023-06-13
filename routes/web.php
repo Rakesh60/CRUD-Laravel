@@ -18,13 +18,14 @@ use App\Http\Controllers\ibmstudencontroller;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::view('/','welcome');
 
 
 Route::get('showdata',[ibmstudencontroller::class,'showdata']);
 Route::post('adddata',[ibmstudencontroller::class,'insertdata']);
 Route::get('delete/{id}',[ibmstudencontroller::class,'deletedata']);
 Route::get('edit/{id}',[ibmstudencontroller::class,'editdata']);
-Route::post('edit',[ibmstudencontroller::class,'updatedata']);
+Route::post('/update',[ibmstudencontroller::class,'updatedata']);
 
 Route::view('aditform','form');
 

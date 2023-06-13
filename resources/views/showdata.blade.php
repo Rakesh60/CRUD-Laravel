@@ -6,18 +6,63 @@
     <title>Document</title>
 </head>
 <style>
-    .container {
+    /* .container {
       display: grid;
       justify-content: center;
       align-items: center;
      
-    }
+    } */
+    /* CSS for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+    background:linear-gradient(to right, #ff6a00, #ee0979);
+    color: #fff;
+    
+}
+td, th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* CSS for the color gradient */
+table.gradient {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+}
+
+/* CSS for the buttons */
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.update-button {
+  background-color: #2196F3;
+}
+
+.delete-button {
+  background-color: #f44336;
+}
 </style>
 <body>
     <div class="container">
 
 
-<table border='1'>
+<table class="table.gradient" >
     <tr><h1>All Student Data</h1></tr>
     <tr>
         <th>Id</th>

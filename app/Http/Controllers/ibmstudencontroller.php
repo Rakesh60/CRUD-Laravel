@@ -16,7 +16,7 @@ class ibmstudencontroller extends Controller
        
      
     }
-    function insertdata(Request $req){
+    function insertdata(Request $req){ //data raw 
      $saving=new ibmstudent();
      $saving->name=$req['name'];
      $saving->email=$req['email'];
@@ -29,6 +29,7 @@ class ibmstudencontroller extends Controller
         $data=ibmstudent::find($id);
         $data->delete();
         return redirect('showdata');
+        //return var_dump( $name);
 
     }
     function editdata($id){
@@ -42,7 +43,11 @@ class ibmstudencontroller extends Controller
         $data->email=$req['email'];
         $data->city=$req['city'];
         $data->save();
+       
+        // return $req->input();
         return redirect('showdata');
+           
     }
+
 
 }
